@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/material_deep_teal_200"
+        android:title="@string/app_name"
+        android:elevation="4dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_gallery_files"
+        android:id="@+id/textViewTitle"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp" />
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:layout_below="@+id/textViewTitle">
+        <fragment class="edu.rasmussen.Compatibility.ImageListFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:name="edu.rasmussen.Compatibility.ImageListFragment"
+            android:id="@+id/imageListFragmentPort"
+            tools:layout="@layout/image_list_fragment" />
+    </FrameLayout>
+
+</RelativeLayout>
+

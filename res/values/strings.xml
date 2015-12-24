@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Compatibility</string>
+    <string name="action_camera">Take Picture</string>
+    <string name="title_gallery_files">These are your existing pictures</string>
+    <string name="image_display_description">Select an image to view here</string>
+</resources>

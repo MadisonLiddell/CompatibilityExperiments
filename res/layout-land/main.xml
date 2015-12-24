@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/material_deep_teal_200"
+        android:elevation="4dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_gallery_files"
+        android:id="@+id/textViewTitleLand"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_alignParentStart="true"
+        android:baselineAligned="true"
+        android:id="@+id/linearLayout">
+
+        <fragment class="edu.rasmussen.Compatibility.ImageListFragment"
+            android:layout_weight="0.75"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:name="edu.rasmussen.Compatibility.ImageListFragment"
+            android:id="@+id/imageListFragmentLand"
+            tools:layout="@layout/image_list_fragment"
+            android:layout_marginTop="30dp" />
+
+        <FrameLayout android:id="@+id/imageFrame" android:layout_weight="1"
+            android:layout_width="0px" android:layout_height="match_parent"
+            android:background="?android:attr/detailsElementBackground" >
+
+            <!--<fragment class="edu.rasmussen.Compatibility.ImageDisplayFragment"-->
+                <!--android:layout_width="0px"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:name="edu.rasmussen.Compatibility.ImageDisplayFragment"-->
+                <!--android:id="@+id/imageDisplayFragmentLand"-->
+                <!--tools:layout="@layout/image_display_fragment" />-->
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
